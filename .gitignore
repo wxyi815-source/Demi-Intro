@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+dist
+.vercel
+*.log
+coverage
+.DS_Store
+*.tsbuildinfo
+Demi-Intro-backup-*.zip

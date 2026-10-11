@@ -16,7 +16,7 @@ export function BackgroundTextTrack({ cardTrackY }: BackgroundTextTrackProps) {
         <img
           key={copyId}
           className="background-svg"
-          src="/assets/path-background.svg"
+          src="./assets/path-background.svg"
           alt=""
           draggable={false}
         />

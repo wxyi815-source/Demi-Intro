@@ -197,8 +197,508 @@ button {
   pointer-events: none;
 }
 
+.archive-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.archive-map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.98;
+  user-select: none;
+  pointer-events: none;
+}
+
+.archive-dots {
+  position: absolute;
+  z-index: 3;
+  top: 3.055556vh;
+  left: 50%;
+  display: flex;
+  gap: 1.041667vw;
+  transform: translateX(-50%);
+}
+
+.archive-dots span {
+  width: 0.677083vw;
+  height: 0.677083vw;
+  border-radius: 50%;
+  background: #d9d9d9;
+}
+
+.archive-dots span.is-active {
+  background: #bfbfbf;
+}
+
+.archive-feature-card {
+  position: absolute;
+  z-index: 4;
+  top: 10vh;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  width: min(31.614583vw, 600px);
+  height: 90vh;
+  min-height: 640px;
+  padding: 6.018519vh 2.604167vw 5.277778vh;
+  transform: translateX(-50%);
+  background: #f5f2ea;
+}
+
+.archive-title-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 4.074074vh;
+  user-select: none;
+  pointer-events: none;
+}
+
+.archive-photo-frame {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: #d4d0c4;
+}
+
+.archive-photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  pointer-events: none;
+}
+
+.music-archive {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.music-record-stage {
+  position: absolute;
+  z-index: 2;
+  top: 12.314815vh;
+  left: 50%;
+  width: 41.5625vw;
+  height: 41.5625vw;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.music-record {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+  transform-origin: center center;
+  filter: drop-shadow(0 2.222222vh 2.777778vh rgba(0, 0, 0, 0.08));
+}
+
+.music-box {
+  position: absolute;
+  z-index: 4;
+  top: 52.592593vh;
+  left: 50%;
+  display: block;
+  width: 48.541667vw;
+  height: auto;
+  transform: translateX(-50%);
+  user-select: none;
+  pointer-events: none;
+}
+
+.music-title-image {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  bottom: 2.777778vh;
+  display: block;
+  width: 17.083333vw;
+  height: auto;
+  transform: translateX(-50%);
+  user-select: none;
+  pointer-events: none;
+}
+
+.photograph-archive {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.photograph-title-image {
+  position: absolute;
+  z-index: 3;
+  top: 16.759259vh;
+  left: 50%;
+  display: block;
+  width: 45.885417vw;
+  height: auto;
+  transform: translateX(-50%);
+  user-select: none;
+  pointer-events: none;
+}
+
+.photograph-grid-image {
+  position: absolute;
+  z-index: 3;
+  top: 32.777778vh;
+  left: 50%;
+  display: block;
+  width: 47.65625vw;
+  height: auto;
+  transform: translateX(-50%);
+  user-select: none;
+  pointer-events: none;
+}
+
+.exhibition-archive {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.exhibition-title-image {
+  position: absolute;
+  z-index: 4;
+  top: 46.388889vh;
+  left: 59.4%;
+  display: block;
+  width: 27%;
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+}
+
+.exhibition-layout {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+}
+
+.exhibition-image-button {
+  position: absolute;
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+  line-height: 0;
+  box-shadow: none;
+}
+
+.exhibition-image-button img {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+}
+
+.exhibition-layout.is-expanded .exhibition-image-button {
+  cursor: default;
+}
+
+.exhibition-copy {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.exhibition-copy.is-visible {
+  opacity: 1;
+}
+
+.exhibition-copy-group {
+  position: absolute;
+  color: #2a2a2a;
+  font-weight: 300;
+  letter-spacing: 0;
+}
+
+.exhibition-copy-group p {
+  margin: 0 0 1.018519vh;
+  font-size: 1.145833vw;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.exhibition-label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-width: 15.885417vw;
+  min-height: 4.074074vh;
+  padding: 0.092593vh 1.145833vw 0.277778vh 1.5625vw;
+  background: rgba(238, 238, 238, 0.86);
+  font-size: 1.770833vw;
+  line-height: 1;
+}
+
+.exhibition-label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.041667vw;
+  height: 100%;
+}
+
+.exhibition-label-yellow::before {
+  background: #f0c63c;
+}
+
+.exhibition-label-teal::before {
+  background: #56b9a8;
+}
+
+.exhibition-label-olive::before {
+  background: #939570;
+}
+
+.exhibition-copy-osaka {
+  top: 16.759259vh;
+  left: 36.875%;
+}
+
+.exhibition-copy-zju {
+  top: 33.240741vh;
+  left: 38.229167%;
+}
+
+.exhibition-copy-ningbo {
+  top: 59.814815vh;
+  left: 58.697917%;
+}
+
+.exhibition-copy-zhejiang {
+  top: 86.296296vh;
+  left: 33.958333%;
+}
+
+.archive-placeholder {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: grid;
+  place-items: center;
+}
+
+.archive-placeholder p {
+  margin: 0;
+  color: #555555;
+  font-size: 5.208333vw;
+  font-weight: 200;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.words-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.words-message {
+  position: absolute;
+  left: 4.6875vw;
+  top: 9.259259vh;
+  color: #000000;
+  font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 5.9375vw;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.words-message p {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.words-message-line {
+  display: flex;
+  align-items: baseline;
+}
+
+.words-message-line img {
+  display: block;
+  width: 29.010417vw;
+  height: auto;
+  margin-left: 0.520833vw;
+  transform: translateY(0.260417vw);
+  user-select: none;
+  pointer-events: none;
+}
+
+.archive-arrow {
+  position: absolute;
+  z-index: 5;
+  top: 53.240741vh;
+  width: 5.052083vw;
+  height: 5.052083vw;
+  min-width: 74px;
+  min-height: 74px;
+  padding: 0;
+  border: 1px solid #111111;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.68);
+  cursor: pointer;
+  transition: background-color var(--ease), transform var(--ease);
+}
+
+.archive-arrow:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+
+.archive-arrow span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.510417vw;
+  height: 1.510417vw;
+  min-width: 22px;
+  min-height: 22px;
+  border-top: 2px solid #111111;
+  border-right: 2px solid #111111;
+}
+
+.archive-arrow-left {
+  left: 4.010417vw;
+}
+
+.archive-arrow-left span {
+  transform: translate(-36%, -50%) rotate(-135deg);
+}
+
+.archive-arrow-right {
+  right: 3.177083vw;
+}
+
+.archive-arrow-right span {
+  transform: translate(-64%, -50%) rotate(45deg);
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .tab-button {
+  .tab-button,
+  .archive-arrow {
     transition-duration: 0ms;
+  }
+}
+
+@media (max-width: 900px) {
+  .archive-feature-card {
+    top: 11vh;
+    width: min(68vw, 480px);
+    height: 74vh;
+    min-height: 0;
+    padding: 5vh 6vw;
+  }
+
+  .archive-photo-frame {
+    flex: 1;
+  }
+
+  .music-record-stage {
+    top: 16vh;
+    width: 68vw;
+    height: 68vw;
+  }
+
+  .music-box {
+    top: 48vh;
+    width: 76vw;
+  }
+
+  .music-title-image {
+    width: 36vw;
+    bottom: 13vh;
+  }
+
+  .photograph-title-image {
+    top: 16vh;
+    width: 72vw;
+  }
+
+  .photograph-grid-image {
+    top: 34vh;
+    width: 74vw;
+  }
+
+  .exhibition-title-image {
+    left: 52%;
+    width: 40%;
+  }
+
+  .exhibition-copy-group p {
+    font-size: 2.2vw;
+  }
+
+  .exhibition-label {
+    min-width: 28vw;
+    min-height: 34px;
+    padding-left: 3vw;
+    font-size: 3.2vw;
+  }
+
+  .exhibition-label::before {
+    width: 2vw;
+  }
+
+  .words-message {
+    left: 7vw;
+    top: 12vh;
+    font-size: 9vw;
+  }
+
+  .words-message-line img {
+    width: 44vw;
+    margin-left: 1vw;
+  }
+
+  .archive-arrow {
+    top: auto;
+    bottom: 5vh;
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    min-height: 64px;
+  }
+
+  .archive-arrow-left {
+    left: 8vw;
+  }
+
+  .archive-arrow-right {
+    right: 8vw;
   }
 }

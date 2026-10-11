@@ -12,7 +12,7 @@ export function Sidebar({ tabs, activeTab, onTabChange }: SidebarProps) {
       <div className="identity">
         <div className="avatar-placeholder">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assets/avatar.jpg" alt="Demi" draggable={false} />
+          <img src="./assets/avatar.jpg" alt="Demi" draggable={false} />
         </div>
         <h1>Demi</h1>
         <p>
